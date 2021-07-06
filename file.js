@@ -2,7 +2,6 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 const form = document.getElementById('add-form');
 const list = document.getElementById('book-list');
-const show = document.getElementById('show');
 const bookStored = JSON.parse(localStorage.getItem('books'));
 let bookList = bookStored;
 if (!bookList) {
@@ -40,7 +39,7 @@ function Add(e) {
   e.preventDefault();
 }
 
-function Remove(e) {
+function Remove(e) { // eslint-disable-line no-unused-vars
   const bookNumber = e.parentNode.classList.value;
   for (let i = 0; i < bookList.length; i += 1) {
     if (bookList[i].number === bookNumber) {
