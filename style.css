@@ -1,0 +1,32 @@
+html * {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+button {
+  padding: 1px 6px;
+}
+
+form button {
+  width: min-content;
+}
+
+input {
+  text-indent: 2px;
+}
