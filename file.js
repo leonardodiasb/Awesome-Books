@@ -1,9 +1,7 @@
-const add = document.getElementById('add-btn');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 const form = document.getElementById('add-form');
 const list = document.getElementById('book-list');
-const removeBtn = document.getElementsByClassName('remove-btn');
 const show = document.getElementById('show');
 const bookStored = JSON.parse(localStorage.getItem('books'));
 let bookList = bookStored;
@@ -14,7 +12,7 @@ let count = Number(localStorage.getItem('count'));
 
 window.addEventListener('load', () => {
   if (bookStored) {
-    for (let j = 0; j < bookStored.length; j++) {
+    for (let j = 0; j < bookStored.length; j += 1) {
       list.insertAdjacentHTML('afterbegin',
         `<div class="${bookStored[j].number}"">
     <p>${bookStored[j].title}</p>
@@ -44,17 +42,13 @@ function Add(e) {
 
 function Remove(e) {
   const bookNumber = e.parentNode.classList.value;
-  for (let i = 0; i < bookList.length; i++) {
-    if (bookList[i].number == bookNumber) {
+  for (let i = 0; i < bookList.length; i += 1) {
+    if (bookList[i].number === bookNumber) {
       bookList.splice(i, 1);
       localStorage.setItem('books', JSON.stringify(bookList));
     }
   }
   e.parentNode.remove();
 }
-
-show.addEventListener('click', (e) => {
-  console.log(bookList);
-});
 
 form.addEventListener('submit', Add);

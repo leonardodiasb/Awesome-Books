@@ -19,14 +19,14 @@ hr {
   margin: 10px 0;
 }
 
+button {
+  padding: 1px 6px;
+}
+
 form button {
   width: min-content;
 }
 
 input {
   text-indent: 2px;
-}
-
-button {
-  padding: 1px 6px;
 }
