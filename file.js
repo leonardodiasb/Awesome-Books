@@ -33,16 +33,16 @@ function Add(e) {
   </div>`);
   const book = { number: count, title: title.value, author: author.value };
   bookList.push(book);
+  count += 1;
   localStorage.setItem('count', JSON.stringify(count));
   localStorage.setItem('books', JSON.stringify(bookList));
-  count += 1;
   e.preventDefault();
 }
 
 function Remove(e) { // eslint-disable-line no-unused-vars
   const bookNumber = e.parentNode.classList.value;
   for (let i = 0; i < bookList.length; i += 1) {
-    if (bookList[i].number === bookNumber) {
+    if (bookList[i].number === Number(bookNumber)) {
       bookList.splice(i, 1);
       localStorage.setItem('books', JSON.stringify(bookList));
     }
