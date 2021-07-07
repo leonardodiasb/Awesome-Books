@@ -4,19 +4,51 @@ html * {
   font-family: monospace;
 }
 
+a {
+ text-decoration: none;
+ color: #000;
+}
+
 header {
   margin: 20px;
 }
 
-h1 {
-  margin: 10px 0;
-  font-size: 30px;
+nav {
+  border: 1px solid #000;
+}
+
+nav,
+#menu-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-icons {
+  list-style: none;
+}
+
+#logo {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+#menu-icons li {
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-left: 1px solid #000;
+}
+
+#date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
 }
 
 main,
 #all-books,
-#book-list,
-form {
+#book-list {
   display: flex;
   flex-direction: column;
 }
@@ -27,12 +59,19 @@ main,
   justify-content: center;
 }
 
-h2 {
+h1 {
   font-size: 28px;
+  text-align: center;
 }
 
-#all-books {
-  margin-top: 30px;
+#list-link {
+  color: blue;
+}
+
+#all-books,
+form,
+#contact-section {
+  margin-top: 50px;
 }
 
 #book-list {
@@ -49,7 +88,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   padding: 3px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #book-list div:nth-child(even) {
@@ -63,14 +102,19 @@ h2 {
 }
 
 form {
-  max-width: 300px;
+  display: none;
+  flex-direction: column;
   gap: 10px;
-  margin-top: 10px;
 }
 
-hr {
-  margin: 10px 0;
-  width: 200px;
+form input {
+  height: 30px;
+  width: 500px;
+  font-size: 20px;
+}
+
+#add-btn {
+  font-size: 16px;
 }
 
 button {
@@ -86,4 +130,29 @@ form button {
 
 input {
   text-indent: 2px;
+}
+
+#contact-section {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-section h1 {
+  margin-bottom: 20px;
+}
+
+#contact-section p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+footer {
+  border: 1px solid #000;
+  margin: 5px;
+  padding: 10px;
+  width: calc(100vw - 30px);
+  position: fixed;
+  bottom: 0;
 }

@@ -89,3 +89,36 @@ list.addEventListener('click', (e) => {
   BookList.deleteBook(e.target);
   BookStored.removeBook(e.target.parentNode.classList.value);
 });
+
+const listPage = document.getElementById('list-link');
+const addPage = document.getElementById('add-link');
+const contactPage = document.getElementById('contact-link');
+const allBookSection = document.getElementById('all-books');
+const contactSection = document.getElementById('contact-section');
+
+listPage.addEventListener('click', () => {
+  allBookSection.style.display = "flex";
+  form.style.display = "none";
+  contactSection.style.display = "none";
+  listPage.style.color = "blue";
+  addPage.style.color = "black";
+  contactPage.style.color = "black";
+});
+
+addPage.addEventListener('click', () => {
+  allBookSection.style.display = "none";
+  form.style.display = "flex";
+  contactSection.style.display = "none";
+  listPage.style.color = "black";
+  addPage.style.color = "blue";
+  contactPage.style.color = "black";
+});
+
+contactPage.addEventListener('click', () => {
+  allBookSection.style.display = "none";
+  form.style.display = "none";
+  contactSection.style.display = "flex";
+  listPage.style.color = "black";
+  addPage.style.color = "black";
+  contactPage.style.color = "blue";
+});
