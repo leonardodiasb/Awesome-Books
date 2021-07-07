@@ -47,13 +47,15 @@ class BookList {
 
   static addBookToList(book) {
     const list = document.getElementById('book-list');
-    list.insertAdjacentHTML('afterbegin',
+    list.insertAdjacentHTML('beforeend',
       `<div class="${count}">
-            <p>${book.title}</p>
-            <p>${book.author}</p>
+            <div class="book-content">
+              <p>"${book.title}"</p>
+              <p>&nbspby&nbsp </p>
+              <p>${book.author}</p>
+            </div>
             <button class='remove-btn' type="button">Remove</button>
-            <hr>
-            </div>`);
+        </div>`);
     count += 1;
   }
 
