@@ -60,9 +60,7 @@ class BookList {
   }
 
   static deleteBook(element) {
-    if (element.classList.contains('remove-btn')) {
-      element.parentNode.remove();
-    }
+    element.parentNode.remove();
   }
 
   static clear() {
