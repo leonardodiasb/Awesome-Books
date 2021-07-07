@@ -5,8 +5,8 @@ html * {
 }
 
 a {
- text-decoration: none;
- color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 header {
@@ -43,7 +43,8 @@ nav,
 #date {
   display: flex;
   justify-content: flex-end;
-  font-size: 14px;
+  font-size: 16px;
+  margin-top: 4px;
 }
 
 main,
@@ -107,6 +108,10 @@ form {
   gap: 10px;
 }
 
+input {
+  text-indent: 2px;
+}
+
 form input {
   height: 30px;
   width: 500px;
@@ -126,10 +131,6 @@ form button {
   width: min-content;
   align-self: flex-end;
   background-color: lime;
-}
-
-input {
-  text-indent: 2px;
 }
 
 #contact-section {
