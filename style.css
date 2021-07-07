@@ -1,30 +1,87 @@
 html * {
   margin: 0;
   padding: 0;
+  font-family: monospace;
+}
+
+header {
+  margin: 20px;
 }
 
 h1 {
   margin: 10px 0;
+  font-size: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+  font-size: 28px;
+}
+
+#all-books {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#book-list {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 350px;
+  border: 2px solid #000;
+  overflow-y: auto;
+  padding: 3px 0;
+}
+
+#book-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  font-size: 16px;
+}
+
+#book-list div:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.remove-btn {
+  margin-right: 5px;
+  background-color: crimson;
+  color: #fff;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  max-width: 150px;
+  max-width: 300px;
   gap: 10px;
   margin-top: 10px;
 }
 
 hr {
   margin: 10px 0;
+  width: 200px;
 }
 
 button {
   padding: 1px 6px;
+  box-shadow: 2px 2px 2px #000;
 }
 
 form button {
   width: min-content;
+  align-self: flex-end;
+  background-color: lime;
 }
 
 input {
