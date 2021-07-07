@@ -13,12 +13,16 @@ h1 {
   font-size: 30px;
 }
 
-main, #all-books, #book-list, form {
+main,
+#all-books,
+#book-list,
+form {
   display: flex;
   flex-direction: column;
 }
 
-main, #all-books {
+main,
+#all-books {
   align-items: center;
   justify-content: center;
 }
