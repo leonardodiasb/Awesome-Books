@@ -60,9 +60,7 @@ class BookList {
   }
 
   static deleteBook(element) {
-    if (element.classList.contains('remove-btn')) {
-      element.parentNode.remove();
-    }
+    element.parentNode.remove();
   }
 
   static clear() {
@@ -86,6 +84,44 @@ form.addEventListener('submit', (e) => {
 
 const list = document.getElementById('book-list');
 list.addEventListener('click', (e) => {
-  BookList.deleteBook(e.target);
-  BookStored.removeBook(e.target.parentNode.classList.value);
+  if (e.target.classList.contains('remove-btn')) {
+    BookList.deleteBook(e.target);
+    BookStored.removeBook(e.target.parentNode.classList.value);
+  }
 });
+
+const listPage = document.getElementById('list-link');
+const addPage = document.getElementById('add-link');
+const contactPage = document.getElementById('contact-link');
+const allBookSection = document.getElementById('all-books');
+const contactSection = document.getElementById('contact-section');
+
+listPage.addEventListener('click', () => {
+  allBookSection.style.display = 'flex';
+  form.style.display = 'none';
+  contactSection.style.display = 'none';
+  listPage.style.color = 'blue';
+  addPage.style.color = 'black';
+  contactPage.style.color = 'black';
+});
+
+addPage.addEventListener('click', () => {
+  allBookSection.style.display = 'none';
+  form.style.display = 'flex';
+  contactSection.style.display = 'none';
+  listPage.style.color = 'black';
+  addPage.style.color = 'blue';
+  contactPage.style.color = 'black';
+});
+
+contactPage.addEventListener('click', () => {
+  allBookSection.style.display = 'none';
+  form.style.display = 'none';
+  contactSection.style.display = 'flex';
+  listPage.style.color = 'black';
+  addPage.style.color = 'black';
+  contactPage.style.color = 'blue';
+});
+
+const dt = new Date();
+document.getElementById('datetime').innerHTML = `${(`0${dt.getDate()}`).slice(-2)}.${(`0${dt.getMonth() + 1}`).slice(-2)}.${dt.getFullYear()} ${(`0${dt.getHours()}`).slice(-2)}:${(`0${dt.getMinutes()}`).slice(-2)}`;

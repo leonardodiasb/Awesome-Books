@@ -9,22 +9,43 @@
 </head>
 <body>
     <header>
-        <h1>Awesome Books</h1>
+        <nav>
+            <p id="logo">Awesome Books</p>
+            <ul id="menu-icons">
+                <li><a href="#" id="list-link">List</a></li>
+                <li><a href="#" id="add-link">Add new</a></li>
+                <li><a href="#" id="contact-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="date">
+            <p><span id="datetime"></span></p>
+        </div>
     </header>
     <main>
         <section id="all-books">
-            <h2>All Awesome Books</h2>
+            <h1>All Awesome Books</h1>
             <div id="book-list">
             </div>
         </section>
-        <hr>
         <form id="add-form">
-            <h2>Add a new book</h2>
+            <h1>Add a new book</h1>
             <input id="title" type="text" placeholder="Title" required>
             <input id="author" type="text" placeholder="Author" required>
             <button type="submit" id="add-btn">Add</button>
         </form>
+        <section id="contact-section">
+                <h1>Contact Information</h1>
+                <p>Do have any questions or you just want to say "Hello"?<br>You can reach out to us!</p>
+                <ul>
+                    <li><p>Our e-mail: mail@mail.com</p></li>
+                    <li><p>Our phone number: 1234567890</p></li>
+                    <li><p>Our address: StreetName 22, 12389 City, Country</p></li>
+                </ul>
+        </section>
     </main>
+    <footer>
+        <p>Copyright: No Copyright.</p>
+    </footer>
     <script src="scripts/main.js"></script>
 </body>
 </html>
